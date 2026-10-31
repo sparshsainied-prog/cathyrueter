@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Cathy Rueter | Murder May I</title>
+<meta name="description" content="Murder May I, Book One of the Games We Play Mystery series by Cathy Rueter. A homepage idea, not the official site.">
+<meta property="og:title" content="A homepage idea for Cathy Rueter, made by Sparsh Saini">
+<meta property="og:description" content="A homepage idea for Murder May I by Cathy Rueter, made by Sparsh Saini. Not the official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/cathyrueter/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23311652'/><text x='16' y='24' font-size='22' text-anchor='middle' fill='%23d0202a' font-family='serif' font-weight='bold'>M</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/plate.jpg">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Colours straight off the Murder May I cover: the purple satin, the white lace of the mask,
+   the red of the title, and the black outline round the letters. */
+:root {
+  --satin: #2a1250;
+  --satin-deep: #1a0c33;
+  --satin-lit: #5b36a0;
+  --lace: #f4f0ea;
+  --lace-dim: #cfc7d8;
+  --blood: #c9161f;
+  --blood-deep: #8c0f16;
+  --ink: #0d0614;
+  --display: "Chonburi", "Bookman Old Style", Georgia, serif;
+  --text: "Lora", Georgia, serif;
+  --gutter: clamp(1.1rem, 5vw, 4rem);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--satin-deep); color: var(--lace); font-family: var(--text); font-size: 1.08rem; line-height: 1.65; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+.wrap { max-width: 68rem; margin: 0 auto; padding: 0 var(--gutter); }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; line-height: 1.04; }
+p { margin: 0 0 1rem; }
+:focus-visible { outline: 3px solid var(--lace); outline-offset: 3px; }
+
+/* The cover's own title treatment: red letters, black edge, a hard shadow under them. */
+.redtitle { color: var(--blood); text-shadow: -2px -2px 0 var(--ink), 2px -2px 0 var(--ink), -2px 2px 0 var(--ink), 2px 2px 0 var(--ink), 4px 6px 0 rgba(0,0,0,.55); }
+.btn { display: inline-block; font-family: var(--display); font-size: 1.1rem; line-height: 1; padding: .85rem 1.3rem .8rem; background: var(--blood); color: var(--lace); text-decoration: none; border: 2px solid var(--ink); border-radius: 3px; box-shadow: 4px 5px 0 var(--ink); transition: transform .12s, box-shadow .12s; text-shadow: 1px 1px 0 var(--ink); }
+.btn:hover, .btn:focus-visible { transform: translate(2px, 3px); box-shadow: 2px 2px 0 var(--ink); }
+.btn.alt { background: transparent; border-color: var(--lace-dim); box-shadow: 4px 5px 0 rgba(0,0,0,.6); }
+.links { display: flex; flex-wrap: wrap; gap: .9rem 1.1rem; align-items: center; margin-top: 1.1rem; }
+
+.top { position: absolute; z-index: 20; top: 0; left: 0; right: 0; }
+.made { margin: 0; padding: .5rem var(--gutter); background: var(--ink); color: var(--lace); font-size: .85rem; line-height: 1.35; text-align: center; font-family: var(--text); }
+.bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .8rem var(--gutter); }
+.mark { font-family: var(--display); font-size: 1.15rem; text-decoration: none; color: var(--lace); text-shadow: 1px 1px 0 var(--ink); letter-spacing: .02em; }
+.bar nav { display: flex; gap: 1.4rem; font-size: .95rem; font-weight: 600; }
+.bar nav a { text-decoration: none; text-shadow: 1px 1px 0 var(--ink); }
+.bar nav a:hover { text-decoration: underline; text-underline-offset: .3em; }
+@media (max-width: 640px) { .bar nav a:not(:last-child) { display: none; } }
+
+/* Hero: you start inside the lace, at the eye of the mask. Scrolling pulls back,
+   and the spatter on the cover lands one drop at a time, feather first, until the book is whole. */
+.hero { position: relative; background: var(--satin-deep); }
+.js .hero { height: 330svh; }
+.stage { position: relative; height: 100svh; min-height: 34rem; overflow: hidden; background: radial-gradient(ellipse at 28% 35%, #3f2178 0%, #2a1250 42%, #150a2b 100%); display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: clamp(2rem, 6vw, 6rem); padding: 5.8rem var(--gutter) 2rem; }
+.js .stage { position: sticky; top: 0; }
+.stage::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, transparent 40%, rgba(13,6,20,.65) 100%); pointer-events: none; }
+.book { position: relative; height: min(78svh, 46rem); aspect-ratio: 1838 / 2775; z-index: 1; }
+.cam { position: absolute; left: 0; top: 0; width: 240%; height: 240%; transform-origin: 0 0; will-change: transform; box-shadow: 0 1.6rem 3rem rgba(0,0,0,.6); }
+.cam img { position: absolute; display: block; max-width: none; }
+.cam .plate { left: 0; top: 0; width: 100%; height: 100%; }
+.cam .drop { will-change: transform, opacity; }
+html:not(.js) .book, html.rm .book { overflow: visible; }
+.copy { position: relative; z-index: 2; max-width: 31rem; will-change: opacity, transform; }
+.copy .kicker { font-size: .95rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--lace-dim); margin-bottom: 1rem; }
+.copy h1 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); color: var(--lace); text-shadow: 2px 3px 0 var(--ink); }
+.copy h1 em { font-style: normal; color: var(--blood); text-shadow: -2px -2px 0 var(--ink), 2px -2px 0 var(--ink), -2px 2px 0 var(--ink), 2px 2px 0 var(--ink), 3px 5px 0 rgba(0,0,0,.55); }
+.copy .by { margin-top: 1.1rem; font-size: 1.05rem; }
+.js .copy { opacity: 0; }
+.js.rm .copy { opacity: 1; }
+@media (max-width: 760px) {
+  .stage { grid-template-columns: 1fr; align-content: start; justify-items: center; gap: 1.4rem; padding-top: 6.2rem; }
+  .book { height: 50svh; }
+  .copy { text-align: center; }
+  .copy .kicker { display: none; }
+  .copy h1 { font-size: 1.9rem; }
+  .copy .by { display: none; }
+  .copy .links { justify-content: center; }
+}
+
+/* A satin ribbon between rooms, drawn the way the cover's ribbon falls: smooth, flat white, a soft shadow */
+.ribbon { display: block; width: 100%; height: 3.6rem; background: var(--satin-deep); }
+.ribbon svg { display: block; width: 100%; height: 100%; }
+
+/* Calm sections */
+.band { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
+.band h2 { font-size: clamp(2rem, 4.6vw, 3.3rem); margin-bottom: 1.2rem; color: var(--lace); text-shadow: 2px 3px 0 var(--ink); }
+.book-sec { background: var(--satin-deep); }
+.book-grid { display: grid; grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.book-grid .cover { width: 100%; box-shadow: 0 1.2rem 2.4rem rgba(0,0,0,.6); }
+.sub { font-size: .95rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--lace-dim); margin-bottom: .6rem; }
+.blurb p { max-width: 38rem; }
+.blurb .hook { font-family: var(--display); font-size: clamp(1.3rem, 2.6vw, 1.75rem); line-height: 1.25; color: var(--lace); margin-bottom: 1.2rem; }
+@media (max-width: 700px) { .book-grid { grid-template-columns: 1fr; } .book-grid .cover { max-width: 15rem; } }
+
+.shorts { background: linear-gradient(170deg, #2a1250 0%, #34196a 55%, #22103f 100%); }
+.rows { margin-top: 2rem; display: grid; gap: 0; }
+.row { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: clamp(1.2rem, 4vw, 3rem); padding: 2rem 0; border-top: 1px solid rgba(244,240,234,.28); align-items: start; }
+.row:last-child { border-bottom: 1px solid rgba(244,240,234,.28); }
+.row img { width: 100%; box-shadow: 0 .8rem 1.6rem rgba(0,0,0,.6); }
+.row h3 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--lace); text-shadow: 2px 2px 0 var(--ink); margin-bottom: .4rem; }
+.row p { max-width: 36rem; }
+.row .when { font-size: .92rem; letter-spacing: .1em; text-transform: uppercase; color: var(--lace-dim); font-weight: 600; margin-bottom: .6rem; }
+@media (max-width: 560px) { .row { grid-template-columns: 6.5rem minmax(0, 1fr); } }
+
+.talks { background: var(--satin-deep); }
+.talk-list { margin: 2rem 0 0; padding: 0; list-style: none; }
+.talk-list li { padding: 1.5rem 0; border-top: 1px solid rgba(244,240,234,.2); display: grid; grid-template-columns: minmax(0, 17rem) minmax(0, 1fr); gap: 1rem 3rem; align-items: baseline; }
+.talk-list li:last-child { border-bottom: 1px solid rgba(244,240,234,.2); }
+.talk-list b { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; color: var(--lace); text-shadow: 1px 2px 0 var(--ink); }
+.talk-list span { color: var(--lace-dim); }
+@media (max-width: 700px) { .talk-list li { grid-template-columns: 1fr; gap: .4rem; } }
+.where { margin-top: 1.6rem; max-width: 40rem; }
+
+.about { background: linear-gradient(190deg, #2a1250 0%, #3a1d74 60%, #26124a 100%); }
+.about .cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem clamp(2rem, 6vw, 5rem); max-width: 56rem; }
+.about .big { grid-column: 1 / -1; font-family: var(--display); font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.25; max-width: 40rem; margin-bottom: .6rem; color: var(--lace); text-shadow: 2px 2px 0 var(--ink); }
+@media (max-width: 700px) { .about .cols { grid-template-columns: 1fr; } }
+
+footer { background: var(--ink); color: var(--lace-dim); padding: 2.4rem 0 3rem; font-size: .95rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: .8rem 2rem; justify-content: space-between; }
+footer p { margin: 0; }
+
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <p class="made">A homepage idea made by Sparsh Saini for Cathy Rueter. Not their official site.</p>
+  <div class="bar">
+    <a class="mark" href="#top">Cathy Rueter</a>
+    <nav><a href="#book">The book</a><a href="#shorts">Mini mysteries</a><a href="#talks">Talks</a><a href="#about">About</a></nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Murder May I">
+  <div class="stage">
+    <div class="book" id="book3d">
+      <div class="cam" id="cam">
+        <img class="plate" src="img/plate.jpg" width="1500" height="2265" alt="Murder May I by Cathy Rueter: a white lace mask on purple satin. Games We Play Series, Book One.">
+        <img class="drop" data-i="0" src="img/spatter-0.png" alt="" style="left:34.82%;top:43.712%;width:17.573%;height:9.766%">
+        <img class="drop" data-i="1" src="img/spatter-1.png" alt="" style="left:31.502%;top:40.505%;width:27.639%;height:15.928%">
+        <img class="drop" data-i="2" src="img/spatter-2.png" alt="" style="left:28.509%;top:47.171%;width:31.284%;height:12.721%">
+        <img class="drop" data-i="3" src="img/spatter-3.png" alt="" style="left:24.048%;top:36.685%;width:35.147%;height:21.982%">
+        <img class="drop" data-i="4" src="img/spatter-4.png" alt="" style="left:21.491%;top:38.595%;width:45.539%;height:22.703%">
+        <img class="drop" data-i="5" src="img/spatter-5.png" alt="" style="left:13.602%;top:39.171%;width:13.166%;height:22.631%">
+        <img class="drop" data-i="6" src="img/spatter-6.png" alt="" style="left:0.109%;top:33.477%;width:22.579%;height:29.333%">
+        <img class="drop" data-i="7" src="img/spatter-7.png" alt="" style="left:5.876%;top:19.243%;width:13.493%;height:80.757%">
+      </div>
+    </div>
+    <div class="copy" id="copy">
+      <p class="kicker">Games We Play Mystery, Book One</p>
+      <h1>Is the killer hiding behind a <em>mask</em> of familiarity?</h1>
+      <p class="by">Murder May I, by Cathy Rueter. Christian mysteries stitched together with a dash of romance and a slash of death.</p>
+      <div class="links">
+        <a class="btn" href="https://www.amazon.com/dp/B0F9PQ7QK2" target="_blank" rel="noopener">Buy on Amazon</a>
+        <a class="btn alt" href="#book">Read the blurb</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true">
+  <svg viewBox="0 0 1200 58" preserveAspectRatio="none"><path d="M0 18 C 180 54, 330 -10, 540 20 S 900 52, 1200 14 L1200 32 C 900 70, 700 38, 540 38 S 180 72, 0 36 Z" fill="#f4f0ea" opacity=".92"/><path d="M0 36 C 180 72, 330 38, 540 38 S 900 70, 1200 32 L1200 38 C 900 78, 700 44, 540 44 S 180 78, 0 42 Z" fill="#000" opacity=".28"/></svg>
+</div>
+
+<section class="band book-sec" id="book">
+  <div class="wrap book-grid">
+    <img class="cover" src="img/cover.jpg" width="1500" height="2265" alt="Murder May I cover" loading="lazy">
+    <div class="blurb">
+      <p class="sub">Book One, Games We Play Mystery series</p>
+      <h2>Murder May I</h2>
+      <p class="hook">Is the killer hiding behind a mask of familiarity?</p>
+      <p>Dallas clothing designer, Jennifer Clark, wants to get through the next show before her style house's respected reputation is tarnished by further mishaps. But someone is playing dangerous games at the expense of Jen and the Lilac Lane Fashions family. When the scheme turns murderous, beautiful Caribbean Marshall, Jen's best friend and lead model, falls victim. Cari's children, nine-year-old twins, August and January, are caught in the snare. Did they witness their mother's demise &hellip; or worse?</p>
+      <p>To complicate matters, Colin, Cari's brother and Jen's former crush, arrives on the scene. Devastated that her best friend kept secrets, Jen questions her future with the kids and the tenuous control she's gained over her own tumultuous past. The one certain thing in her life is her faith &hellip; or is it? When the twisted rules change once again, Jen and Colin must work together to save the twins and win the deadly game of murdered model.</p>
+      <p>Published by Elk Lake Publishing, Inc., end of May 2025. Print and ebook.</p>
+      <div class="links"><a class="btn" href="https://www.amazon.com/dp/B0F9PQ7QK2" target="_blank" rel="noopener">Buy on Amazon</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="band shorts" id="shorts">
+  <div class="wrap">
+    <h2>Two mini mysteries</h2>
+    <p style="max-width:38rem">Novelettes wrapped around the full-length series. Both the print and ebook feature trivia, games, and more, and the print books carry one extra game.</p>
+    <div class="rows">
+      <article class="row">
+        <img src="img/muffet.jpg" width="640" height="1021" alt="Scaring Miss Muffet Away cover" loading="lazy">
+        <div>
+          <p class="when">Prequel to Murder May I, mid 2025</p>
+          <h3>Scaring Miss Muffet Away</h3>
+          <p>Caribbean Marshall is beyond exhausted after a grueling photo shoot in Hawaii. She can't wait to return home to Texas and cuddle her nine-year-old twins, Auggie and Ree. But when a teenage girl is ensnared by her traveling companion's venomous web of lies, Cari steps in. All's well that ends well &hellip; maybe.</p>
+          <div class="links">
+            <a class="btn" href="https://a.co/d/5ov1tJC" target="_blank" rel="noopener">Amazon print</a>
+            <a class="btn alt" href="https://www.barnesandnoble.com/w/scaring-miss-muffet-away-cathy-rueter/1147505345?ean=9798992071030" target="_blank" rel="noopener">Barnes &amp; Noble</a>
+          </div>
+        </div>
+      </article>
+      <article class="row">
+        <img src="img/llama.jpg" width="640" height="1021" alt="It's Beginning to Look a Llama Like Christmas cover" loading="lazy">
+        <div>
+          <p class="when">Christmas 2024 novelette</p>
+          <h3>It's Beginning to Look a Llama Like Christmas</h3>
+          <p>Roselyn Turnquist, principal sewist for Lilac Lane Fashions, is in charge of corralling her colleagues to create fashionable fiber accessories for their yearly fundraising auction. Or it would all work out if Kris Kringle, the ever-watchful llama at God's Free-range Alpaca Farm, wasn't under barn arrest for assaulting someone and leaving him for dead in the pasture.</p>
+          <div class="links">
+            <a class="btn" href="https://a.co/d/h7BCBV0" target="_blank" rel="noopener">Amazon</a>
+            <a class="btn alt" href="https://www.barnesandnoble.com/w/its-beginning-to-look-a-llama-like-christmas-cathy-rueter/1147646290?ean=9798992071009" target="_blank" rel="noopener">Barnes &amp; Noble</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band talks" id="talks">
+  <div class="wrap">
+    <h2>Talks for writers</h2>
+    <p style="max-width:38rem">Cathy also runs the CLeaRly Creative Writing Community, and speaks to writers about the craft. These are the talks she lists.</p>
+    <ul class="talk-list">
+      <li><b>Writing with Rubber Bands</b><span>Creating tension in story. When to pull it taut and when to release it, all without harming a single rubber band.</span></li>
+      <li><b>Editing B4 the Editor</b><span>10 tips to save time, money, and credibility with pre-editing. Don't make your editor get out their mop instead of their polishing cloth.</span></li>
+      <li><b>Name Game</b><span>So much more than just a matter of recognition. What's in a name, and why it matters what we call our characters.</span></li>
+      <li><b>Image Is Everything &hellip; Isn't It?</b><span>The five images of a writer: Self, Other, Community, Profession, and Faith.</span></li>
+    </ul>
+    <p class="where">She was a panelist at Bouchercon, the World Mystery Convention, in Dallas in 2019.</p>
+  </div>
+</section>
+
+<section class="band about" id="about">
+  <div class="wrap">
+    <h2>About Cathy</h2>
+    <div class="cols">
+      <p class="big">Michigan roots and Texas shoots. She calls herself a Texagander Gal.</p>
+      <p>Born just outside Chicago and mostly raised in Michigan, Cathy now writes from Texas. She holds a Bachelor of Fine Arts from Grand Valley State University, and she describes her writing as &ldquo;not-quite-cozy&rdquo; Christian murder mysteries.</p>
+      <p>She's a boy mom who had to learn about snakes, reptiles, bugs and airplanes. For years she drove a minivan to haul her boys' gear and a couple of Bearded Dragons, both leash-trained by her sons. She says she can get lost in her own backyard, and that backyard was 22 acres of dense woods.</p>
+      <p>Her first novel took nearly thirteen years, on and off. In 2023 she signed a three-book contract with Elk Lake Publishing, and she was a finalist in the ACFW Genesis contest.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>A mockup made by Sparsh Saini for Cathy Rueter. Not affiliated, not live.</p>
+    <p><a href="https://www.cathyrueter.com/" target="_blank" rel="noopener">Cathy's real site</a> &nbsp; <a href="https://www.instagram.com/cathyrueterwriter/" target="_blank" rel="noopener">Instagram</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var hero = document.querySelector('.hero'), book = document.getElementById('book3d'), cam = document.getElementById('cam'), copy = document.getElementById('copy');
+  var drops = [].slice.call(document.querySelectorAll('.drop'));
+  var Z = 2.4, K0 = 2.4, OX = 0.51, OY = 0.42, ex = 0, ey = 0;
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bw = 0, bh = 0, start = 0, span = 1, raf = 0;
+  // centres of each group of drops, as a share of its own box, so each pops from its middle
+  var org = [[.5,.5],[.5,.5],[.5,.5],[.5,.5],[.5,.5],[.5,.5],[.5,.5],[.5,.5]];
+  var ct = [[41.5,49.1,34.82,43.712,17.573,9.766],[43.3,47.6,31.502,40.505,27.639,15.928],[39.1,52.9,28.509,47.171,31.284,12.721],[31.9,46.7,24.048,36.685,35.147,21.982],[35.6,49.8,21.491,38.595,45.539,22.703],[20.9,48.3,13.602,39.171,13.166,22.631],[9.1,45.4,0.109,33.477,22.579,29.333],[13.3,74.6,5.876,19.243,13.493,80.757]];
+  drops.forEach(function (d, i) { var c = ct[i]; d.style.transformOrigin = ((c[0]-c[2])/c[4]*100).toFixed(1) + '% ' + ((c[1]-c[3])/c[5]*100).toFixed(1) + '%'; });
+  function ease(t) { return 1 - Math.pow(1 - t, 3); }
+  function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function measure() {
+    bw = book.offsetWidth; bh = book.offsetHeight;
+    var st = hero.querySelector('.stage'), sw = st.clientWidth, sh = st.clientHeight, br = book.getBoundingClientRect(), sr = st.getBoundingClientRect();
+    K0 = Math.min(3.4, Math.max(2.4, sw / bw * 1.12)); Z = K0;
+    cam.style.width = (Z * 100) + '%'; cam.style.height = (Z * 100) + '%';
+    ex = sw / 2 - (br.left - sr.left + OX * bw); ey = sh * 0.52 - (br.top - sr.top + OY * bh);
+    var r = hero.getBoundingClientRect(); start = r.top + window.scrollY; span = hero.offsetHeight - window.innerHeight;
+  }
+  function render(p) {
+    var k = 1 + (K0 - 1) * (1 - ease(clamp(p / 0.82)));
+    var s = k / Z, w = (k - 1) / (K0 - 1);
+    cam.style.transform = 'translate3d(' + (OX * bw * (1 - k) + ex * w).toFixed(1) + 'px,' + (OY * bh * (1 - k) + ey * w).toFixed(1) + 'px,0) scale(' + s.toFixed(4) + ')';
+    for (var i = 0; i < drops.length; i++) {
+      var t0 = 0.10 + i * 0.075, t = clamp((p - t0) / 0.06);
+      var e = ease(t);
+      drops[i].style.opacity = t <= 0 ? 0 : Math.min(1, e * 2.2);
+      drops[i].style.transform = 'scale(' + (1 + 1.6 * (1 - e)).toFixed(3) + ')';
+    }
+    var c = clamp((p - 0.62) / 0.22);
+    copy.style.opacity = c; copy.style.transform = 'translate3d(0,' + ((1 - ease(c)) * 18).toFixed(1) + 'px,0)';
+  }
+  function tick() { raf = 0; var p = clamp((window.scrollY - start) / span); render(p); }
+  function onScroll() { if (!raf) raf = requestAnimationFrame(tick); }
+  if (rm) { root.classList.add('rm'); hero.style.height = 'auto'; hero.querySelector('.stage').style.position = 'relative'; measure(); render(1); copy.style.opacity = 1; copy.style.transform = 'none'; return; }
+  measure(); tick();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', function () { measure(); tick(); });
+  window.addEventListener('load', function () { measure(); tick(); });
+})();
+</script>
+</body>
+</html>
